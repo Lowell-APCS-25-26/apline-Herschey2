@@ -1,12 +1,16 @@
 package org.APCSLowell;
 
 public class APLine {
-    int a, b, c;
-    public APLine(int a, int b, int c) {}
-    public boolean isOnLine(int x, int y) {
-        return a * x + b * y + c == 0;
+    private double a, b, c;
+    public APLine(double x, double y, double z) {
+        a=x;
+        b=y;
+        c=z;
+    }
+    public boolean isOnLine(double x, double y) {
+        return a * x + b * y + c == 0.0;
     }
     public double getSlope() {
-        return -(double)a / (double)b;
+        return (-a/b);
     }
 }
